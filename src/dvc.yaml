@@ -1,0 +1,10 @@
+stages:
+  load_data:
+    cmd: python load_data.py --config=params.yaml
+    deps:
+      - get_data.py
+      - load_data.py
+      - D:\MLOPS\project\data_given\winequality.csv
+    outs:
+      - D:\MLOPS\project\data\raw\winequality.csv
+
